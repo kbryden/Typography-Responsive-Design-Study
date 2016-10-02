@@ -102,14 +102,20 @@ html {
      box-sizing: inherit;
    }
 
-body {
-    background-color: #676767;
+@media screen and (max-width: 480px) {
+    .main-content {
+            padding: 0.5em;
+    }
+    .body {
+            background-color: #fcfbfb;
+    }
 }
 
+@media screen and (min-width: 480px) {
 .main-content {
     background-color: #fcfbfb;
     max-width: 57em;
-    margin: -2.5em auto 0 auto;
+    margin: 0 auto 0 auto;
     position: center;
     padding: 0 8.4em 3em 11em;
     font-family: 'Josefin Sans', sans-serif;
@@ -117,6 +123,13 @@ body {
     font-weight: 400;
     color: #001f1f;
     clear: both;
+}
+body {
+    background-color: #676767;
+}
+ h1 {
+    margin: 0 0 0 -2.75em;
+ }
 }
 
 header {
@@ -130,14 +143,14 @@ header {
     font-weight: 400;
     color: #001f1f;
     clear: both;
+    border-bottom: 2px solid #e2c2b8;
 }
 
 h1 {
     font-size: 4em;
     line-height: 1.2em;
-    text-transform: uppercase;
-    margin: 0;
     padding: 0;
+    width: 10em;
 }
 
 h2 {
@@ -148,7 +161,30 @@ h1, h2 {
     font-family: 'Josefin Sans', sans-serif;
     color: #fb3c02;
     font-weight: 700;
+    text-transform: uppercase;
 }
+
+q {
+    font-size: 1.62em;
+}
+
+.color, .one-app {
+    border-bottom: 2px solid #e2c2b8;
+}
+
+a:link {
+    color: #36aec0;
+}
+
+a:visited {
+    color: #36aec0;
+}
+
+a:hover {
+    color: #fb3c02;
+}
+
+/* paragraph styling */
 
 .main-author {
     font-family: 'Josefin Sans', sans-serif;
@@ -156,15 +192,38 @@ h1, h2 {
     font-weight: 400;
     font-size: 2.25em;
     text-align: right;
+    margin: 0;
 }
 
-q {
-    font-size: 1.92em;
+@media screen and (min-width: 750px) {
+    .font-size, .prioritize {
+        width: 35em;
+        background-color: #f7f0ee;
+        margin: 0 0 0 -13em;
+        padding: 3em;
+        float: left;
+    }
+
+    .space, .make-sure {
+        padding: 1em 0 0 23em;
+    }
+
+    .make-sure {
+        margin: 0 -5em 0 0;
+    }
+
+    .clearfix {
+        padding: 1em 0 0 0;
+        clear: both;
+    }
+
+    .q-right {
+        text-align: center;
+        width: 7em;
+        float: right;
+    }
 }
 
-.opening-p {
-    padding-left: 5em;
-}
 
 /* Main-Nav */
 
